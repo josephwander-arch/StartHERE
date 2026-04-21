@@ -114,18 +114,15 @@ The dashboard is a single HTML file served directly by Manager. Nothing to insta
 
 ## How they fit
 
-```
-You ─── chat with your AI
-           │
-           ├── manager ──── delegates to ──── Claude Code / Codex / Gemini
-           │                                  (running in their own sandboxes)
-           ├── local    ──── reads/writes files, runs shell, tracks breadcrumbs
-           ├── hands    ──── drives browser, clicks Windows apps, reads screen
-           ├── workflow ──── stores API patterns, replays direct HTTP
-           └── echo     ──── runs local Ollama models for cheap tasks
-```
+You chat with your AI in Claude Desktop. That's where the workflow starts. Everything else plugs in around that:
 
-Each server stands alone. You don't need all of them. Pair them when a task crosses boundaries.
+- **manager** delegates coding tasks out to Claude Code, Codex, or Gemini in their own sandboxes, so your main chat stays focused on deciding what to build rather than writing the code inline.
+- **local** gives your AI read/write access to your files, a shell, and a breadcrumb system that picks up where you left off if something crashes.
+- **hands** is the body — it drives browsers, clicks Windows apps, and reads what's on screen when nothing else works.
+- **workflow** turns any repeated browser task into a direct HTTP call, with an encrypted credential vault so tokens never sit in plaintext.
+- **echo** runs local Ollama models for cheap tasks that don't need to hit the cloud.
+
+Each one stands alone. You don't need all of them. Pair them when a task crosses boundaries.
 
 ---
 
