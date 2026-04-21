@@ -24,7 +24,13 @@ Built by one person. Apache 2.0 across the board. Permanently. No free tier that
 | **[voice](https://github.com/josephwander-arch/voice)** | Talk to Claude Desktop - faster-whisper STT + edge-tts TTS | 10 |
 | **[mcp-obsidian-bridge](https://github.com/josephwander-arch/mcp-obsidian-bridge)** | Bridge local stdio MCP servers to claude.ai over HTTPS | utility |
 
-Voice - talk to your AI while it works, it keeps running tools while you're thinking - is now live. See [voice](https://github.com/josephwander-arch/voice).
+Voice — talk to your AI while it works, it keeps running tools while you're thinking — is now live.
+
+Once local is installed, say this to Claude in your chat window:
+
+> `https://github.com/josephwander-arch/voice` — Can you install this MCP for us to use here and the voice listening server, and make me a new `.bat` to call it and direct me to do what I need to do to get both sides running, then we can have a talk.
+
+Same prompt works in Claude Code, Codex CLI, or Gemini CLI if you'd rather install it from a terminal agent. Full details in the [voice repo](https://github.com/josephwander-arch/voice).
 
 ---
 
