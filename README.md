@@ -14,23 +14,23 @@ Built by one person. Apache 2.0 across the board. Permanently. No free tier that
 
 | Repo | What it does | Tools |
 |------|--------------|-------|
-| **[local](https://github.com/josephwander-arch/local)** | Shell, files, persistent sessions, breadcrumb-tracked multi-step ops | 105 |
-| **[manager](https://github.com/josephwander-arch/manager)** | Run many Claude Code / Codex / Gemini sessions in parallel, from chat | 48 |
-| **[hands](https://github.com/josephwander-arch/hands)** | Browser + Windows UI + vision automation in one binary | 116 |
-| **[workflow](https://github.com/josephwander-arch/workflow)** | Graduate browser automations into direct HTTP + encrypted credential vault | 37 |
-| **[echo](https://github.com/josephwander-arch/echo)** | Local AI via Ollama — cheap semantic search and summarization | 16 |
-| **[cpc-breadcrumbs](https://github.com/josephwander-arch/cpc-breadcrumbs)** | Shared crate — crash-safe operation tracking | library |
-| **[cpc-paths](https://github.com/josephwander-arch/cpc-paths)** | Shared crate — portable path discovery | library |
-| **[voice](https://github.com/josephwander-arch/voice)** | Talk to Claude Desktop - faster-whisper STT + edge-tts TTS | 10 |
-| **[mcp-obsidian-bridge](https://github.com/josephwander-arch/mcp-obsidian-bridge)** | Bridge local stdio MCP servers to claude.ai over HTTPS | utility |
+| **[local](https://github.com/AIWander/local)** | Shell, files, persistent sessions, breadcrumb-tracked multi-step ops | 105 |
+| **[manager](https://github.com/AIWander/manager)** | Run many Claude Code / Codex / Gemini sessions in parallel, from chat | 48 |
+| **[hands](https://github.com/AIWander/hands)** | Browser + Windows UI + vision automation in one binary | 116 |
+| **[workflow](https://github.com/AIWander/workflow)** | Graduate browser automations into direct HTTP + encrypted credential vault | 37 |
+| **[echo](https://github.com/AIWander/echo)** | Local AI via Ollama — cheap semantic search and summarization | 16 |
+| **[cpc-breadcrumbs](https://github.com/AIWander/cpc-breadcrumbs)** | Shared crate — crash-safe operation tracking | library |
+| **[cpc-paths](https://github.com/AIWander/cpc-paths)** | Shared crate — portable path discovery | library |
+| **[voice](https://github.com/AIWander/voice)** | Talk to Claude Desktop - faster-whisper STT + edge-tts TTS | 10 |
+| **[mcp-obsidian-bridge](https://github.com/AIWander/mcp-obsidian-bridge)** | Bridge local stdio MCP servers to claude.ai over HTTPS | utility |
 
 Voice — talk to your AI while it works, it keeps running tools while you're thinking — is now live.
 
 Once local is installed, say this to Claude in your chat window:
 
-> `https://github.com/josephwander-arch/voice` — Can you install this MCP for us to use here and the voice listening server, and make me a new `.bat` to call it and direct me to do what I need to do to get both sides running, then we can have a talk.
+> `https://github.com/AIWander/voice` — Can you install this MCP for us to use here and the voice listening server, and make me a new `.bat` to call it and direct me to do what I need to do to get both sides running, then we can have a talk.
 
-Same prompt works in Claude Code, Codex CLI, or Gemini CLI if you'd rather install it from a terminal agent. Full details in the [voice repo](https://github.com/josephwander-arch/voice).
+Same prompt works in Claude Code, Codex CLI, or Gemini CLI if you'd rather install it from a terminal agent. Full details in the [voice repo](https://github.com/AIWander/voice).
 
 ---
 
@@ -40,10 +40,10 @@ Same prompt works in Claude Code, Codex CLI, or Gemini CLI if you'd rather insta
 
 One binary, double-click, done.
 
-> **[Download install-local-v0.2-x64.exe](https://github.com/josephwander-arch/local/releases/latest/download/install-local-v0.2-x64.exe)** · Windows x64 (Intel/AMD) · 9.1 MB
+> **[Download install-local-v0.2-x64.exe](https://github.com/AIWander/local/releases/latest/download/install-local-v0.2-x64.exe)** · Windows x64 (Intel/AMD) · 9.1 MB
 > SHA256: `799401d35285f84ac600d047bdcb4d434021a68cb6a00ec17c63985111c784eb`
 >
-> **[Download install-local-v0.2-arm64.exe](https://github.com/josephwander-arch/local/releases/latest/download/install-local-v0.2-arm64.exe)** · Windows ARM64 (Surface/Qualcomm) · 7.95 MB
+> **[Download install-local-v0.2-arm64.exe](https://github.com/AIWander/local/releases/latest/download/install-local-v0.2-arm64.exe)** · Windows ARM64 (Surface/Qualcomm) · 7.95 MB
 > SHA256: `2ee07b210b88c70423695adbc0b18cea675b3c391c512b2bb853b2291e86f685`
 
 It drops `local.exe` and a matching `uninstall-local.exe` into `C:\CPC\servers\`, surgically edits your Claude Desktop config to register the `local` MCP server (your existing MCP servers are preserved, and the whole config is backed up first with a timestamped copy). Takes under 10 seconds. Quit Claude Desktop and reopen it — local is now live.
@@ -52,13 +52,13 @@ It drops `local.exe` and a matching `uninstall-local.exe` into `C:\CPC\servers\`
 
 **Clean uninstall whenever.** The installer drops `uninstall-local.exe` alongside `local.exe`. Standalone copies are also attached to each release if you ever need to re-grab one. No rogue files, no orphaned config entries.
 
-On macOS? The manual path still works: grab the binary from the [latest release](https://github.com/josephwander-arch/local/releases/latest), drop it in the right spot, add four lines to your Claude Desktop config, restart. That's the only manual install you'll ever do.
+On macOS? The manual path still works: grab the binary from the [latest release](https://github.com/AIWander/local/releases/latest), drop it in the right spot, add four lines to your Claude Desktop config, restart. That's the only manual install you'll ever do.
 
 ### Step 2 — Ask Claude to install the rest
 
 In your normal chat window, say:
 
-> *"Install hands, manager, and workflow from github.com/josephwander-arch and wire them into my Claude Desktop config."*
+> *"Install hands, manager, and workflow from github.com/AIWander and wire them into my Claude Desktop config."*
 
 Claude uses local's own tools to do it:
 
@@ -88,7 +88,7 @@ The foundation piece. Think of it as your AI's hands and eyes on your Windows fi
 - **Config management** — back up and validate Claude Desktop config before any change. This is what the installer and uninstaller use under the hood.
 - **SQLite queries** — read-only SELECT against any .db file. Useful for poking at indexes and local state.
 
-And dozens more. See the full [tool list](https://github.com/josephwander-arch/local) in the repo. Everything you'd want a shell agent to do without reaching for `cmd.exe`.
+And dozens more. See the full [tool list](https://github.com/AIWander/local) in the repo. Everything you'd want a shell agent to do without reaching for `cmd.exe`.
 
 ---
 
@@ -114,7 +114,7 @@ This is Manager's dashboard, served on `localhost` the moment Manager is running
 
 The dashboard is a single HTML file served directly by Manager. Nothing to install separately.
 
-> **[Download dashboard preview HTML](https://github.com/josephwander-arch/manager/releases/latest/download/dashboard.html)** — standalone version you can open in a browser to poke at the layout. The real one comes for free once Manager is running.
+> **[Download dashboard preview HTML](https://github.com/AIWander/manager/releases/latest/download/dashboard.html)** — standalone version you can open in a browser to poke at the layout. The real one comes for free once Manager is running.
 
 ---
 
